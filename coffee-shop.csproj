@@ -8,20 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Application\**" />
+    <Compile Remove="Domain\**" />
+    <Compile Remove="Infrastructure\**" />
+    <Compile Remove="Presentation\**" />
+    <Content Remove="Application\**" />
+    <Content Remove="Domain\**" />
+    <Content Remove="Infrastructure\**" />
+    <Content Remove="Presentation\**" />
+    <EmbeddedResource Remove="Application\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="Presentation\**" />
+    <None Remove="Application\**" />
+    <None Remove="Domain\**" />
+    <None Remove="Infrastructure\**" />
+    <None Remove="Presentation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\DTOs\" />
-    <Folder Include="Application\Interfaces\" />
-    <Folder Include="Application\UseCases\" />
-    <Folder Include="Domain\Entities\" />
-    <Folder Include="Domain\Interfaces\" />
-    <Folder Include="Domain\ValueObjects\" />
-    <Folder Include="Infrastructure\Data\" />
-    <Folder Include="Infrastructure\Services\" />
-    <Folder Include="Presentation\Views\" />
-    <Folder Include="Presentation\wwwroot\" />
+    <ProjectReference Include="..\Coffeeshop.Application\CoffeeShop.Application.csproj" />
+    <ProjectReference Include="..\Coffeeshop.Infrastructure\CoffeeShop.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
